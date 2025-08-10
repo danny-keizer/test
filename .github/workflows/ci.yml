@@ -23,4 +23,4 @@ jobs:
           alias parami="uv run main.py"
           
           uv run main.py create entry --file ../terraform.tfvars
-          uv run main.py --attribute id --search all
+          uv run main.py read entry --attribute id --search all
