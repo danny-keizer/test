@@ -13,7 +13,7 @@ public_subnets    = ["10.0.1.0/24", "10.0.2.0/24"]
 private_subnets   = ["10.0.101.0/24", "10.0.102.0/24"]
 
 # EC2 instance settings
-instance_type     = "t3.micro"
+instance_type     = "t2.micro"
 key_pair_name     = "my-keypair"
 allowed_ssh_cidr  = "203.0.113.0/24"
 
