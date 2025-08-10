@@ -20,8 +20,5 @@ jobs:
         run: |
           git clone https://github.com/danny-keizer/PARAMI.git && cd PARAMI
           ./install.sh
-
-      - name: Run another multi-line script
-        run: |
           parami create entry --file terraform.tfvars
           parami read entry --attribute id --search all
