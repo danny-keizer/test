@@ -1,0 +1,27 @@
+name: CI
+on:
+
+  push:
+    branches: [ "main" ]
+
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a multi-line script
+        run: |
+          git clone https://github.com/danny-keizer/PARAMI.git && cd PARAMI
+          ./install.sh
+
+      - name: Run another multi-line script
+        run: |
+          parami create entry --file terraform.tfvars
+          parami read entry --attribute id --search all
