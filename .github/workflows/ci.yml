@@ -18,7 +18,8 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          git clone https://github.com/danny-keizer/PARAMI.git && cd PARAMI
-          ./install.sh
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          git clone https://github.com/danny-keizer/PARAMI.git
+
           uv run main.py create entry --file terraform.tfvars
           uv run main.py --attribute id --search all
