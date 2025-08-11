@@ -19,8 +19,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
-          git clone https://github.com/danny-keizer/PARAMI.git && cd PARAMI
-          alias parami="uv run main.py"
+          git clone https://github.com/danny-keizer/Parami.git && cd Parami
+          uv tool install .
           
           parami create entry --file ../terraform.tfvars
           parami read entry --attribute id --search all
