@@ -25,5 +25,5 @@ jobs:
 
       - name: Run Commands
         run: |
-          parami create entry --file terraform.tfvars
+          parami create entry --file data.json
           parami read entry --attribute id --search all
