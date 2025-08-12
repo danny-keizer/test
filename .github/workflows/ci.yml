@@ -24,6 +24,9 @@ jobs:
       - name: Create Entry
         run: |
           parami create entry --file data.json
+          parami create entry --env DB_PORT
+          parami create entry --env WEB_PORT
+          parami create entry --env LOOPBACK_IP
           parami read entry --attribute id --search all
 
       - name: Apply Policy
