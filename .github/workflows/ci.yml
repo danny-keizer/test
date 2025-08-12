@@ -29,5 +29,9 @@ jobs:
 
       - name: Create Constraints
         run: |
-          parami create constraint data.user.id notequals 42 
-          parami create constraint status is success
+          chmod +x constraints.sh
+          ./constraints.sh
+
+      - name: Apply Policy
+        run: |
+          parami apply policy
