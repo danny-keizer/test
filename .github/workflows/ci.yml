@@ -27,11 +27,7 @@ jobs:
           parami create entry --file data.json
           parami read entry --attribute id --search all
 
-      - name: Create Constraints
-        run: |
-          chmod +x constraints.sh
-          ./constraints.sh
-
       - name: Apply Policy
         run: |
-          parami apply policy
+          chmod +x constraints.sh
+          parami apply policy --file constraints.sh
