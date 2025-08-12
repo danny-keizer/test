@@ -22,8 +22,12 @@ jobs:
           git clone https://github.com/danny-keizer/Parami.git && cd Parami
           uv tool install .
 
-
-      - name: Run Commands
+      - name: Create Entry
         run: |
           parami create entry --file data.json
           parami read entry --attribute id --search all
+
+      - name: Create Constraints
+        run: |
+          parami create constraint data.user.id notequals 42 
+          parami create constraint status is success
