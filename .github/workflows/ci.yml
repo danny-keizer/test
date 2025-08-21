@@ -28,9 +28,11 @@ jobs:
           parami create entry --env DB_PORT
           parami create entry --env WEB_PORT
           parami create entry --env LOOPBACK_IP
-          parami read entry --attribute id --search all
+          parami read entry --all
 
       - name: Apply Policy
         run: |
           chmod +x constraints.sh
           parami apply policy --file constraints.sh
+          parami read constraint --all
+          
