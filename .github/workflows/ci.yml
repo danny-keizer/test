@@ -23,6 +23,7 @@ jobs:
 
       - name: Create Entry
         run: |
+          parami init
           parami create entry --file data.json
           parami create entry --env DB_PORT
           parami create entry --env WEB_PORT
